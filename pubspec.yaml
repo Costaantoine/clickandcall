@@ -1,0 +1,40 @@
+name: elderly_launcher
+description: A simplified launcher for elderly users.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Core Features - Updated versions compatible with Flutter 3.38
+  flutter_tts: ^4.2.5
+  speech_to_text: ^7.3.0
+  camera: ^0.11.3
+  sqflite: ^2.4.2
+  path_provider: ^2.1.5
+  url_launcher: ^6.3.2
+  battery_plus: ^7.0.0
+  permission_handler: ^12.0.1
+  intl: ^0.20.2
+  image_picker: ^1.2.1
+  uuid: ^4.5.2
+  connectivity_plus: ^7.0.0
+  string_similarity: ^2.1.1
+  shared_preferences: ^2.5.4
+  get_it: ^9.2.0
+  vibration: ^3.1.5
+  torch_light: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mockito: ^5.4.5
+  build_runner: ^2.4.15
+
+flutter:
+  uses-material-design: true
