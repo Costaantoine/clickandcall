@@ -1,0 +1,112 @@
+# Project: clickandcall
+
+## Project Context
+
+A new Flutter project.
+
+## Coding Rules
+
+- Use **snake_case** naming convention
+- Use **absolute** imports
+- File organization: **modular**
+- Design patterns in use: command, handler, helper, provider, service
+
+### Python Rules
+- All function signatures must have type hints
+- Use Google-style docstrings on all public functions and classes
+- Never use bare `except:`
+
+## Architecture
+
+- **Type:** monolith
+- **Infrastructure:** Frontend
+
+## File Structure
+
+```
+android/
+  android/build.gradle.kts
+  android/gradlew.bat
+  android/settings.gradle.kts
+  android/gradlew
+  android/gradle.properties
+  android/.gitignore
+  android/local.properties
+  android/.gradle/file-system.probe
+  android/app/build.gradle.kts
+  android/.gradle/buildOutputCleanup/cache.properties
+  ... and 32 more files
+ios/
+  ios/.gitignore
+  ios/Runner.xcworkspace/contents.xcworkspacedata
+  ios/RunnerTests/RunnerTests.swift
+  ios/Runner.xcodeproj/project.pbxproj
+  ios/Flutter/Generated.xcconfig
+  ios/Flutter/AppFrameworkInfo.plist
+  ios/Flutter/Debug.xcconfig
+  ios/Flutter/Release.xcconfig
+  ios/Flutter/flutter_export_environment.sh
+  ios/Runner/Runner-Bridging-Header.h
+  ... and 35 more files
+lib/
+  lib/globals.dart
+  lib/service_locator.dart
+  lib/main.dart
+  lib/services/call_service.dart
+  lib/services/kiosk_mode_service.dart
+  lib/services/settings_service.dart
+  lib/services/connectivity_service.dart
+  lib/services/tts_service.dart
+  lib/services/database_service.dart
+  lib/services/weather_service.dart
+  ... and 8 more files
+linux/
+  linux/.gitignore
+  linux/CMakeLists.txt
+  linux/runner/my_application.cc
+  linux/runner/main.cc
+  linux/runner/CMakeLists.txt
+  linux/runner/my_application.h
+  linux/flutter/generated_plugin_registrant.h
+  linux/flutter/generated_plugin_registrant.cc
+  linux/flutter/CMakeLists.txt
+  linux/flutter/generated_plugins.cmake
+macos/
+  macos/.gitignore
+  macos/Runner.xcworkspace/contents.xcworkspacedata
+  macos/RunnerTests/RunnerTests.swift
+  macos/Runner.xcodeproj/project.pbxproj
+  macos/Flutter/Flutter-Release.xcconfig
+  macos/Flutter/GeneratedPluginRegistrant.swift
+  macos/Flutter/Flutter-Debug.xcconfig
+  macos/Runner/DebugProfile.entitlements
+  macos/Runner/Info.plist
+  macos/Runner/MainFlutterWindow.swift
+  ... and 20 more files
+test/
+  test/widget_test.dart
+web/
+  web/index.html
+  web/manifest.json
+  web/favicon.png
+  web/icons/Icon-192.png
+  web/icons/Icon-512.png
+  web/icons/Icon-maskable-192.png
+  web/icons/Icon-maskable-512.png
+windows/
+  windows/.gitignore
+  windows/CMakeLists.txt
+  windows/runner/flutter_window.h
+  windows/runner/resource.h
+  windows/runner/win32_window.cpp
+  windows/runner/flutter_window.cpp
+  windows/runner/utils.h
+  windows/runner/Runner.rc
+  windows/runner/win32_window.h
+  windows/runner/runner.exe.manifest
+  ... and 8 more files
+```
+
+## Tech Stack
+
+- **Languages:** dart, c, swift, cpp, kotlin, shell, objective-c, python, java

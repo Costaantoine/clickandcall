@@ -13,14 +13,26 @@ void main() async {
   setupLocator();
   
   // 🔒 ACTIVER LE MODE KIOSK IMMÉDIATEMENT
-  final kioskService = KioskModeService();
-  kioskService.enableKioskMode();
-  
+  try {
+    final kioskService = KioskModeService();
+    kioskService.enableKioskMode();
+  } catch (e) {
+    print('Failed to enable kiosk mode: $e');
+  }
+
   // 🚀 Configurer comme launcher par défaut (Android natif)
-  await KioskChannelService.setAsDefaultLauncher();
-  
+  try {
+    await KioskChannelService.setAsDefaultLauncher();
+  } catch (e) {
+    print('Failed to set default launcher: $e');
+  }
+
   // Activer le kiosk natif Android (bloque boutons physiques)
-  await KioskChannelService.enableNativeKiosk();
+  try {
+    await KioskChannelService.enableNativeKiosk();
+  } catch (e) {
+    print('Failed to enable native kiosk: $e');
+  }
 
   runApp(const ElderlyLauncherApp());
 }

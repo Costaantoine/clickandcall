@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:elderly_launcher/services/tts_service.dart';
 import 'package:elderly_launcher/services/database_service.dart';
+import 'package:elderly_launcher/service_locator.dart';
 
 class SmsReaderScreen extends StatefulWidget {
   final String sender;
@@ -21,8 +22,8 @@ class SmsReaderScreen extends StatefulWidget {
 }
 
 class _SmsReaderScreenState extends State<SmsReaderScreen> {
-  late final TtsService _tts;
-  late final DatabaseService _db;
+  final TtsService _tts = getIt<TtsService>();
+  final DatabaseService _db = getIt<DatabaseService>();
   String _langCode = "pt";
   bool _isReading = false;
   
@@ -77,7 +78,7 @@ class _SmsReaderScreenState extends State<SmsReaderScreen> {
   
   Future<void> _loadLang() async {
     final prefs = await SharedPreferences.getInstance();
-    setState(() => _langCode = prefs.getString('language') ?? "pt");
+    if (mounted) setState(() => _langCode = prefs.getString('language') ?? "pt");
   }
   
   String get t {

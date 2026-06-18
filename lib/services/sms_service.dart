@@ -18,8 +18,17 @@ class SmsService {
     _channel.setMethodCallHandler((call) async {
       if (call.method == 'onSmsReceived') {
         final Map<dynamic, dynamic> data = call.arguments;
-        final String sender = data['sender']?.toString() ?? 'Inconnu';
-        final String message = data['message']?.toString() ?? '';
+        // Sanitisation et troncature des données
+        String sender = data['sender']?.toString() ?? '';
+        String message = data['message']?.toString() ?? '';
+        // Valider sender : uniquement chiffres et +
+        final senderRegex = RegExp(r'^[0-9+]+$');
+        if (sender.length > 20 || !senderRegex.hasMatch(sender)) {
+          sender = 'Inconnu';
+        }
+        if (message.length > 500) {
+          message = message.substring(0, 500);
+        }
         final int timestamp = data['timestamp'] ?? DateTime.now().millisecondsSinceEpoch;
         final smsData = {
           'sender': sender,
@@ -29,7 +38,7 @@ class SmsService {
         
         _smsStreamController.add(smsData);
         
-        // Afficher automatiquement l'écran de lecture
+        // Afficher une boîte de dialogue de confirmation au lieu d'une navigation automatique
         if (navigatorKey.currentContext != null) {
           Navigator.of(navigatorKey.currentContext!).push(
             MaterialPageRoute(

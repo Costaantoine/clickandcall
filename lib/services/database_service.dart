@@ -20,11 +20,16 @@ class DatabaseService {
   Future<Database> _initDatabase() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     String path = join(documentsDirectory.path, 'elderly_launcher.db');
-    return await openDatabase(
-      path,
-      version: 1,
-      onCreate: _onCreate,
-    );
+    try {
+      return await openDatabase(
+        path,
+        version: 1,
+        onCreate: _onCreate,
+      );
+    } catch (e) {
+      print('Error opening database: $e');
+      rethrow;
+    }
   }
 
   Future<void> _onCreate(Database db, int version) async {

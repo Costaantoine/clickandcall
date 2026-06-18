@@ -1,0 +1,45 @@
+# Windsurf Rules — clickandcall
+
+## Project Context
+
+A new Flutter project.
+
+## Rules
+
+### Naming & Style
+- Naming convention: **snake_case**
+- Import style: **absolute**
+- File organization: **modular**
+
+### Design Patterns
+- command
+- handler
+- helper
+- provider
+- service
+
+### Python
+- Type hints on all function signatures
+- Google-style docstrings on public APIs
+- No bare `except:` clauses
+
+## Architecture
+
+**Type:** monolith
+
+**Infrastructure:** Frontend
+
+## File Structure
+
+- `android/` [kotlin]
+- `ios/` [swift]
+- `lib/` [dart]
+- `linux/` [c]
+- `macos/` [swift]
+- `test/` [dart]
+- `web/`
+- `windows/` [c]
+
+## Tech Stack
+
+- **Languages:** dart, c, swift, cpp, kotlin, shell, objective-c, python, java

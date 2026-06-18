@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final Map<String, Map<String, String>> _uiTranslations = {
     "fr": {
-      "welcome": "Bienvenue. Touchez un contact pour l'appeler. Touchez deux fois pour entendre le nom.",
+      "welcome": "Bienvenue. Touchez un contact pour entendre son nom. Maintenez pour appeler.",
       "listening": "À l'écoute... Dites Appeler, Photo ou Vidéo.",
       "video_start": "Démarrage de l'appel vidéo.",
       "no_wifi": "Pas de Wi-Fi. Appel impossible.",
@@ -83,10 +83,16 @@ class _HomeScreenState extends State<HomeScreen> {
       "sos_msg": "Urgence. Maintenez pour appeler.",
       "emergency_calling": "Appel d'urgence en cours",
       "sos_label": "SOS",
-      "sos_hold": "Maintenir pour appeler"
+      "sos_hold": "Maintenir pour appeler",
+      "flashlight_on": "Lampe allumée",
+      "flashlight_off": "Lampe éteinte",
+      "flashlight_unavailable": "Lampe non disponible",
+      "video_call_family": "Appel vidéo famille",
+      "battery_level": "Batterie à {level} pour cent",
+      "weather": "Météo aujourd'hui. {condition}. {temperature} degrés."
     },
     "pt": {
-      "welcome": "Bem-vindo. Toque duas vezes para ligar. Toque uma vez para ouvir o nome.",
+      "welcome": "Bem-vindo. Toque num contacto para ouvir o nome. Mantenha premido para ligar.",
       "listening": "À escuta... Diga Liga, Foto ou Vídeo.",
       "video_start": "A iniciar chamada de vídeo.",
       "no_wifi": "Sem Wi-Fi. Chamada impossível.",
@@ -96,10 +102,16 @@ class _HomeScreenState extends State<HomeScreen> {
       "empty_contacts": "Sem contactos.\nToque em FOTO para adicionar.",
       "manual_voice": "VOZ",
       "manual_photo": "FOTO",
-      "sos_msg": "Emergência. Prima para ligar.",
-      "emergency_calling": "A ligar para emergência",
+      "sos_msg": "Emergência. Mantenha premido para ligar.",
+      "emergency_calling": "A ligar para a emergência",
       "sos_label": "SOS",
-      "sos_hold": "Prima para ligar"
+      "sos_hold": "Mantenha premido para ligar",
+      "flashlight_on": "Lanterna ligada",
+      "flashlight_off": "Lanterna desligada",
+      "flashlight_unavailable": "Lanterna não disponível",
+      "video_call_family": "Chamada de vídeo família",
+      "battery_level": "Bateria com {level} por cento",
+      "weather": "Tempo hoje. {condition}. {temperature} graus."
     },
     "es": {
       "welcome": "Bienvenido. Toque un contacto para oír su nombre. Mantenga presionado para llamar.",
@@ -115,7 +127,13 @@ class _HomeScreenState extends State<HomeScreen> {
       "sos_msg": "Emergencia. Mantenga para llamar.",
       "emergency_calling": "Llamando a emergencia",
       "sos_label": "SOS",
-      "sos_hold": "Mantenga para llamar"
+      "sos_hold": "Mantenga para llamar",
+      "flashlight_on": "Linterna encendida",
+      "flashlight_off": "Linterna apagada",
+      "flashlight_unavailable": "Linterna no disponible",
+      "video_call_family": "Llamada de vídeo familia",
+      "battery_level": "Batería al {level} por ciento",
+      "weather": "Clima hoy. {condition}. {temperature} grados."
     },
     "en": {
       "welcome": "Welcome. Tap a contact to hear their name. Hold to call.",
@@ -131,7 +149,13 @@ class _HomeScreenState extends State<HomeScreen> {
       "sos_msg": "SOS. Hold to call.",
       "emergency_calling": "Calling emergency services",
       "sos_label": "SOS",
-      "sos_hold": "Hold to call"
+      "sos_hold": "Hold to call",
+      "flashlight_on": "Flashlight on",
+      "flashlight_off": "Flashlight off",
+      "flashlight_unavailable": "Flashlight unavailable",
+      "video_call_family": "Family video call",
+      "battery_level": "Battery at {level} percent",
+      "weather": "Weather today. {condition}. {temperature} degrees."
     }
   };
 
@@ -164,20 +188,22 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     await initializeDateFormatting(locale, null);
     _updateTime();
-    _applyLanguageToServices();
+    await _applyLanguageToServices();
     
     // Charger les numéros SOS et le délai
     _sosNumbers = await _settings.getEmergencyNumbers();
     _sosDelay = await _settings.getSosDelay();
     
-    // Announce welcome
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _tts.speak(_uiTranslations[_langCode]!["welcome"]!);
-      _initVoice();
-    });
+    // Announce welcome (dans la bonne langue, TTS déjà initialisé)
+    if (mounted) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _tts.speak(_uiTranslations[_langCode]!["welcome"]!);
+        _initVoice();
+      });
+    }
   }
 
-  void _applyLanguageToServices() {
+  Future<void> _applyLanguageToServices() async {
     String ttsLocale;
     switch (_langCode) {
       case "es": ttsLocale = "es-ES"; break;
@@ -185,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case "pt": ttsLocale = "pt-PT"; break;
       default: ttsLocale = "fr-FR";
     }
-    _tts.setLocale(ttsLocale);
+    await _tts.init(ttsLocale);
     _voiceParams.setLocale(ttsLocale);
   }
 
@@ -482,7 +508,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _updateTime() {
     final DateTime now = DateTime.now();
-    final locale = _langCode == "fr" ? "fr_FR" : "pt_PT";
+    String locale;
+    switch (_langCode) {
+      case "es": locale = "es_ES"; break;
+      case "en": locale = "en_US"; break;
+      case "pt": locale = "pt_PT"; break;
+      default: locale = "fr_FR";
+    }
     setState(() {
       _timeString = DateFormat('HH:mm').format(now);
       _dateString = DateFormat('EEEE, d MMMM', locale).format(now).toUpperCase();
@@ -516,14 +548,14 @@ class _HomeScreenState extends State<HomeScreen> {
     try {
       if (_isFlashlightOn) {
         await TorchLight.disableTorch();
-        _tts.speak("Lampe éteinte");
+        _tts.speak(_uiTranslations[_langCode]!["flashlight_off"]!);
       } else {
         await TorchLight.enableTorch();
-        _tts.speak("Lampe allumée");
+        _tts.speak(_uiTranslations[_langCode]!["flashlight_on"]!);
       }
       setState(() => _isFlashlightOn = !_isFlashlightOn);
     } catch (e) {
-      _tts.speak("Lampe non disponible");
+      _tts.speak(_uiTranslations[_langCode]!["flashlight_unavailable"]!);
     }
   }
 
@@ -536,13 +568,12 @@ class _HomeScreenState extends State<HomeScreen> {
       _clockTapCount = 0;
     });
     
-    // 1 tap = announce time and date
+    // 1 tap = announce time and date (format numerique pour le TTS)
     if (_clockTapCount == 1) {
       await Vibration.vibrate(duration: 100);
-      String timeDateText = _langCode == 'pt' ? '$_timeString, $_dateString' :
-                           _langCode == 'es' ? '$_timeString, $_dateString' :
-                           _langCode == 'en' ? '$_timeString, $_dateString' : '$_timeString, $_dateString';
-      _tts.speak(timeDateText);
+      final DateTime now = DateTime.now();
+      String ttsDate = "${now.day.toString().padLeft(2, '0')}/${now.month.toString().padLeft(2, '0')}/${now.year}";
+      _tts.speak('$_timeString, $ttsDate');
     }
     // 5 taps = admin mode
     else if (_clockTapCount >= 5) {
@@ -592,9 +623,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     GestureDetector(
                       onTap: () async {
                         await Vibration.vibrate(duration: 100);
-                        String batteryText = _langCode == 'pt' ? 'Bateria a $_batteryLevel porcento' :
-                                         _langCode == 'es' ? 'Batería al $_batteryLevel por ciento' :
-                                         _langCode == 'en' ? 'Battery at $_batteryLevel percent' : 'Batterie à $_batteryLevel pourcent';
+                        String level = _batteryLevel.toString();
+                        String batteryText = _uiTranslations[_langCode]!["battery_level"]!
+                            .replaceAll("{level}", level);
                         _tts.speak(batteryText);
                       },
                       child: Row(
@@ -677,7 +708,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     isSmallScreen: isSmallScreen,
                     onTap: () async {
                       await Vibration.vibrate(duration: 100);
-                      _tts.speak("Appel vidéo famille");
+                      _tts.speak(_uiTranslations[_langCode]!["video_call_family"]!);
                       _checkWifiAndVideoCall();
                     },
                   ),
@@ -719,10 +750,9 @@ class _HomeScreenState extends State<HomeScreen> {
                            _weather?.announceWeather(_langCode);
                          } else if (statusLower.contains("batterie") || statusLower.contains("battery") || 
                                     statusLower.contains("bateria")) {
-                           String batteryText = _langCode == 'pt' ? 'Bateria a $_batteryLevel porcento' :
-                                           _langCode == 'es' ? 'Batería al $_batteryLevel por ciento' :
-                                           _langCode == 'en' ? 'Battery at $_batteryLevel percent' : 
-                                           'Batterie à $_batteryLevel pourcent';
+                           String level = _batteryLevel.toString();
+                           String batteryText = _uiTranslations[_langCode]!["battery_level"]!
+                               .replaceAll("{level}", level);
                            _tts.speak(batteryText);
                          }
                       });

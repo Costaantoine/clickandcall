@@ -1,0 +1,1352 @@
+{
+  "name": "clickandcall",
+  "description": "A new Flutter project.",
+  "root_path": "/root/clickandcall",
+  "languages": [
+    "dart",
+    "c",
+    "swift",
+    "cpp",
+    "kotlin",
+    "shell",
+    "objective-c",
+    "python",
+    "java"
+  ],
+  "frameworks": [
+    "cmake",
+    "flutter",
+    "gradle"
+  ],
+  "build_commands": [],
+  "architecture": {
+    "architecture_type": "monolith",
+    "entry_points": [],
+    "services": [],
+    "has_frontend": true,
+    "has_backend": false,
+    "has_database": false,
+    "has_docker": false,
+    "has_ci": false
+  },
+  "modules": [
+    {
+      "name": "android",
+      "path": "android",
+      "purpose": "",
+      "files": [
+        {
+          "path": "android/build.gradle.kts",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/gradlew.bat",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/settings.gradle.kts",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/gradlew",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/gradle.properties",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gitignore",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/local.properties",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/file-system.probe",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/build.gradle.kts",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/buildOutputCleanup/cache.properties",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/buildOutputCleanup/buildOutputCleanup.lock",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/buildOutputCleanup/outputFiles.bin",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/noVersion/buildLogic.lock",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/gc.properties",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/vcs-1/gc.properties",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/fileChanges/last-build.bin",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/executionHistory/executionHistory.bin",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/executionHistory/executionHistory.lock",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/checksums/md5-checksums.bin",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/checksums/checksums.lock",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/checksums/sha1-checksums.bin",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/fileHashes/fileHashes.lock",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/fileHashes/fileHashes.bin",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/.gradle/8.14/fileHashes/resourceHashesCache.bin",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/debug/AndroidManifest.xml",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/profile/AndroidManifest.xml",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/AndroidManifest.xml",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+          "language": "java",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/drawable-v21/launch_background.xml",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/drawable/launch_background.xml",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/values-night/styles.xml",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/res/values/styles.xml",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/kotlin/com/example/elderly_launcher/MainActivity.kt",
+          "language": "kotlin",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/kotlin/com/example/elderly_launcher/SmsReceiver.kt",
+          "language": "kotlin",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/app/src/main/kotlin/com/example/elderly_launcher/BootReceiver.kt",
+          "language": "kotlin",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/gradle/wrapper/gradle-wrapper.properties",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "android/gradle/wrapper/gradle-wrapper.jar",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        }
+      ],
+      "language": "kotlin",
+      "framework": null
+    },
+    {
+      "name": "ios",
+      "path": "ios",
+      "purpose": "",
+      "files": [
+        {
+          "path": "ios/.gitignore",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner.xcworkspace/contents.xcworkspacedata",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/RunnerTests/RunnerTests.swift",
+          "language": "swift",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner.xcodeproj/project.pbxproj",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Flutter/Generated.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Flutter/AppFrameworkInfo.plist",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Flutter/Debug.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Flutter/Release.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Flutter/flutter_export_environment.sh",
+          "language": "shell",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Runner-Bridging-Header.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/GeneratedPluginRegistrant.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Info.plist",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/GeneratedPluginRegistrant.m",
+          "language": "objective-c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/AppDelegate.swift",
+          "language": "swift",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Flutter/ephemeral/flutter_lldbinit",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Base.lproj/Main.storyboard",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Base.lproj/LaunchScreen.storyboard",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "ios/Flutter/ephemeral/flutter_lldb_helper.py",
+          "language": "python",
+          "exports": [
+            "handle_new_rx_page"
+          ],
+          "imports": [
+            "lldb"
+          ],
+          "purpose": "data access"
+        }
+      ],
+      "language": "swift",
+      "framework": null
+    },
+    {
+      "name": "lib",
+      "path": "lib",
+      "purpose": "",
+      "files": [
+        {
+          "path": "lib/globals.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/service_locator.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/main.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/call_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/kiosk_mode_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/settings_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/connectivity_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/tts_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/database_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/weather_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/voice_command_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/kiosk_channel_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/services/sms_service.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/utils/extensions.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/screens/sms_reader_screen.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/screens/home_screen.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/screens/admin_settings_screen.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "lib/screens/add_contact_screen.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        }
+      ],
+      "language": "dart",
+      "framework": null
+    },
+    {
+      "name": "linux",
+      "path": "linux",
+      "purpose": "",
+      "files": [
+        {
+          "path": "linux/.gitignore",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/CMakeLists.txt",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/runner/my_application.cc",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/runner/main.cc",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/runner/CMakeLists.txt",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/runner/my_application.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/flutter/generated_plugin_registrant.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/flutter/generated_plugin_registrant.cc",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/flutter/CMakeLists.txt",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "linux/flutter/generated_plugins.cmake",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        }
+      ],
+      "language": "c",
+      "framework": null
+    },
+    {
+      "name": "macos",
+      "path": "macos",
+      "purpose": "",
+      "files": [
+        {
+          "path": "macos/.gitignore",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner.xcworkspace/contents.xcworkspacedata",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/RunnerTests/RunnerTests.swift",
+          "language": "swift",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner.xcodeproj/project.pbxproj",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Flutter/Flutter-Release.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Flutter/GeneratedPluginRegistrant.swift",
+          "language": "swift",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Flutter/Flutter-Debug.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/DebugProfile.entitlements",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Info.plist",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/MainFlutterWindow.swift",
+          "language": "swift",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Release.entitlements",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/AppDelegate.swift",
+          "language": "swift",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Flutter/ephemeral/flutter_export_environment.sh",
+          "language": "shell",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Flutter/ephemeral/Flutter-Generated.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Base.lproj/MainMenu.xib",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Configs/Debug.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Configs/Warnings.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Configs/Release.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Configs/AppInfo.xcconfig",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        }
+      ],
+      "language": "swift",
+      "framework": null
+    },
+    {
+      "name": "test",
+      "path": "test",
+      "purpose": "",
+      "files": [
+        {
+          "path": "test/widget_test.dart",
+          "language": "dart",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        }
+      ],
+      "language": "dart",
+      "framework": null
+    },
+    {
+      "name": "web",
+      "path": "web",
+      "purpose": "",
+      "files": [
+        {
+          "path": "web/index.html",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "web/manifest.json",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "web/favicon.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "web/icons/Icon-192.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "web/icons/Icon-512.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "web/icons/Icon-maskable-192.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "web/icons/Icon-maskable-512.png",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        }
+      ],
+      "language": null,
+      "framework": null
+    },
+    {
+      "name": "windows",
+      "path": "windows",
+      "purpose": "",
+      "files": [
+        {
+          "path": "windows/.gitignore",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/CMakeLists.txt",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/flutter_window.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/resource.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/win32_window.cpp",
+          "language": "cpp",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/flutter_window.cpp",
+          "language": "cpp",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/utils.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/Runner.rc",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/win32_window.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/runner.exe.manifest",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/CMakeLists.txt",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/utils.cpp",
+          "language": "cpp",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/main.cpp",
+          "language": "cpp",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/flutter/generated_plugin_registrant.h",
+          "language": "c",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/flutter/generated_plugin_registrant.cc",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/flutter/CMakeLists.txt",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/flutter/generated_plugins.cmake",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        },
+        {
+          "path": "windows/runner/resources/app_icon.ico",
+          "language": "unknown",
+          "exports": [],
+          "imports": [],
+          "purpose": ""
+        }
+      ],
+      "language": "c",
+      "framework": null
+    }
+  ],
+  "dependencies": [],
+  "conventions": {
+    "naming": "snake_case",
+    "file_org": "modular",
+    "import_style": "absolute",
+    "test_pattern": "",
+    "patterns_used": [
+      "command",
+      "handler",
+      "helper",
+      "provider",
+      "service"
+    ]
+  },
+  "tech_debt": [],
+  "security": [],
+  "testing": [],
+  "decisions": [],
+  "api_surface": [],
+  "git_insights": {
+    "total_commits": 1,
+    "contributors": [
+      "Costaantoine"
+    ],
+    "hotspots": [
+      ".gitignore",
+      ".metadata",
+      "README.md",
+      "analysis_options.yaml",
+      "android/.gitignore",
+      "android/app/build.gradle.kts",
+      "android/app/src/debug/AndroidManifest.xml",
+      "android/app/src/main/AndroidManifest.xml",
+      "android/app/src/main/kotlin/com/example/elderly_launcher/BootReceiver.kt",
+      "android/app/src/main/kotlin/com/example/elderly_launcher/MainActivity.kt"
+    ],
+    "recent_files": [],
+    "branch": "master"
+  },
+  "metadata": {
+    "scanned_at": "2026-06-18T08:11:36.482737Z",
+    "version": "0.1.0",
+    "git_sha": "6c9d14a480f37aff6e6f68083f452d866d74d4e0",
+    "scan_duration": 5.196
+  }
+}

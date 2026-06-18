@@ -240,7 +240,10 @@ class _AdminSettingsScreenState extends State<AdminSettingsScreen> {
                 DropdownMenuItem(value: "en", child: Text("English")),
               ],
               onChanged: (val) {
-                if (val != null) setState(() => _selectedLanguage = val);
+                if (val != null) {
+                  setState(() => _selectedLanguage = val);
+                  _settings.setLanguage(val); // Sauvegarde immédiate
+                }
               },
             ),
           ),

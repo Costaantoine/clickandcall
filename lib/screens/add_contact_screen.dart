@@ -209,6 +209,11 @@ class _AddContactScreenState extends State<AddContactScreen> {
   Future<void> _saveContact() async {
     final t = _translations[_langCode]!;
     if (_name.isNotEmpty && _number.isNotEmpty) {
+      final phoneRegex = RegExp(r'^[+0-9\s\-()]{1,20}$');
+      if (!phoneRegex.hasMatch(_number)) {
+        _tts.speak(t["data_err"]!);
+        return;
+      }
       await _db.addContact(_name, _imagePath ?? "", _number);
       _tts.speak(t["save_ok"]!);
       if (mounted) Navigator.pop(context);

@@ -20,9 +20,12 @@ class KioskModeService {
       overlays: [],
     );
     
-    // Bloquer l'orientation en portrait
+    // Permettre toutes les orientations (rotation écran téléphone/tablette)
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
     ]);
     
     print('🔒 Mode Kiosk activé - Navigation système bloquée');
@@ -36,6 +39,14 @@ class KioskModeService {
       SystemUiMode.edgeToEdge,
       overlays: SystemUiOverlay.values,
     );
+    
+    // Restaurer toutes les orientations
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
     
     print('🔓 Mode Kiosk désactivé - Navigation système restaurée');
   }

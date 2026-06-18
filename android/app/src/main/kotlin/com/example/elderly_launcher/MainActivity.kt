@@ -183,10 +183,10 @@ class MainActivity: FlutterActivity() {
             override fun onCallStateChanged(state: Int, phoneNumber: String?) {
                 when (state) {
                     TelephonyManager.CALL_STATE_IDLE -> {
-                        // Appel terminé, fermer l'app si pas en mode kiosque
-                        if (!isKioskModeEnabled) {
-                            finish()
-                        }
+                        // Appel terminé — rouvrir l'app automatiquement
+                        val intent = packageManager.getLaunchIntentForPackage(packageName)
+                        intent?.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+                        if (intent != null) startActivity(intent)
                     }
                 }
             }
